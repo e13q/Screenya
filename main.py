@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import ImageGrab
 from paddleocr import PaddleOCR
-from googletrans import Translator
 import pyperclip
 import numpy as np
 import json
@@ -59,9 +58,6 @@ class ScreenshotApp:
 
         # Инициализация PaddleOCR
         self.ocr = PaddleOCR(use_angle_cls=True, lang='en')
-
-        # Инициализация Google Translate
-        self.translator = Translator()
 
     def load_settings(self):
         settings_file = f"settings_{self.index}.json"
